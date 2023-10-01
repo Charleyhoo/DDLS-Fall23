@@ -1,0 +1,225 @@
+/global/common/software/nersc/pm-2022q4/sw/pytorch/1.13.1/lib/python3.9/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See
+https://pytorch.org/docs/stable/distributed.html#launch-utility for
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+*****************************************
+Collecting env info...
+PyTorch version: 1.13.1
+Is debug build: False
+CUDA used to build PyTorch: 11.7
+ROCM used to build PyTorch: N/A
+
+OS: SUSE Linux Enterprise Server 15 SP4 (x86_64)
+GCC version: (GCC) 11.2.0 20210728 (Cray Inc.)
+Clang version: Could not collect
+CMake version: version 3.20.4
+Libc version: glibc-2.31
+
+Python version: 3.9.15 (main, Nov 24 2022, 14:31:59)  [GCC 11.2.0] (64-bit runtime)
+Python platform: Linux-5.14.21-150400.24.69_12.0.74-cray_shasta_c-x86_64-with-glibc2.31
+Is CUDA available: True
+CUDA runtime version: 11.7.64
+CUDA_MODULE_LOADING set to: LAZY
+GPU models and configuration:
+GPU 0: NVIDIA A100-SXM4-40GB
+GPU 1: NVIDIA A100-SXM4-40GB
+GPU 2: NVIDIA A100-SXM4-40GB
+GPU 3: NVIDIA A100-SXM4-40GB
+
+Nvidia driver version: 525.105.17
+cuDNN version: Could not collect
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+Versions of relevant libraries:
+[pip3] kfac-pytorch==0.4.1
+[pip3] numpy==1.23.4
+[pip3] pytorch-lightning==1.6.5
+[pip3] torch==1.13.1
+[pip3] torch-cluster==1.6.0
+[pip3] torch-geometric==2.2.0
+[pip3] torch-scatter==2.1.0
+[pip3] torch-sparse==0.6.16
+[pip3] torch-tb-profiler==0.4.0
+[pip3] torchinfo==1.8.0
+[pip3] torchmetrics==0.11.0
+[pip3] torchvision==0.14.1a0+5e8e2f1
+[conda] Could not collect
+
+Global rank 0 initialized: local_rank = 0, world_size = 4
+Global rank 1 initialized: local_rank = 1, world_size = 4
+Global rank 2 initialized: local_rank = 2, world_size = 4
+Global rank 3 initialized: local_rank = 3, world_size = 4
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to /tmp/cifar10/cifar-10-python.tar.gz
+100%|███████████████████████| 170498071/170498071 [00:03<00:00, 46839173.91it/s]
+Extracting /tmp/cifar10/cifar-10-python.tar.gz to /tmp/cifar10
+Files already downloaded and verified
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+ResNet                                   [128, 10]                 --
+├─Conv2d: 1-1                            [128, 16, 32, 32]         432
+├─BatchNorm2d: 1-2                       [128, 16, 32, 32]         32
+├─Sequential: 1-3                        [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-1                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-1                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-2             [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-3                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-4             [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-5              [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-2                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-6                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-7             [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-8                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-9             [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-10             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-3                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-11                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-12            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-13                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-14            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-15             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-4                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-16                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-17            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-18                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-19            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-20             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-5                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-21                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-22            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-23                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-24            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-25             [128, 16, 32, 32]         --
+├─Sequential: 1-4                        [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-6                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-26                 [128, 32, 16, 16]         4,608
+│    │    └─BatchNorm2d: 3-27            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-28                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-29            [128, 32, 16, 16]         64
+│    │    └─LambdaLayer: 3-30            [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-7                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-31                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-32            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-33                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-34            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-35             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-8                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-36                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-37            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-38                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-39            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-40             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-9                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-41                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-42            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-43                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-44            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-45             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-10                  [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-46                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-47            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-48                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-49            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-50             [128, 32, 16, 16]         --
+├─Sequential: 1-5                        [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-11                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-51                 [128, 64, 8, 8]           18,432
+│    │    └─BatchNorm2d: 3-52            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-53                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-54            [128, 64, 8, 8]           128
+│    │    └─LambdaLayer: 3-55            [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-12                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-56                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-57            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-58                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-59            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-60             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-13                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-61                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-62            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-63                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-64            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-65             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-14                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-66                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-67            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-68                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-69            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-70             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-15                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-71                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-72            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-73                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-74            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-75             [128, 64, 8, 8]           --
+├─Linear: 1-6                            [128, 10]                 650
+==========================================================================================
+Total params: 464,154
+Trainable params: 464,154
+Non-trainable params: 0
+Total mult-adds (G): 8.81
+==========================================================================================
+Input size (MB): 1.57
+Forward/backward pass size (MB): 620.77
+Params size (MB): 1.86
+Estimated Total Size (MB): 624.20
+==========================================================================================
+KFACPreconditioner(
+  accumulation_steps=1,
+  allreduce_bucket_cap_mb=25,
+  allreduce_method=AllreduceMethod.ALLREDUCE_BUCKETED,
+  assignment=KAISAAssignment,
+  assignment_strategy=AssignmentStrategy.COMPUTE,
+  colocate_factors=True,
+  compute_eigenvalue_outer_product=True,
+  compute_method=ComputeMethod.EIGEN,
+  damping=0.003,
+  distributed_strategy=DistributedStrategy.COMM_OPT,
+  factor_decay=0.95,
+  factor_dtype=None,
+  factor_update_steps=1,
+  grad_scaler=False,
+  grad_worker_fraction=1.0,
+  inv_dtype=torch.float32,
+  inv_update_steps=10,
+  kl_clip=0.001,
+  layers=32,
+  loglevel=10,
+  lr=<function get_optimizer.<locals>.<lambda> at 0x150b23847dc0>,
+  skip_layers=[],
+  steps=0,
+  symmetry_aware=False,
+  update_factors_in_hook=True,
+)
+Epoch   1/ 10: 100%|██████████| 98/98 [00:10<00:00,  9.75it/s, loss: 1.8006, acc
+             : 100%|██████████| val_loss: 2.2584, val_acc: 35.48%
+Epoch   2/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.13it/s, loss: 1.2705, acc
+             : 100%|██████████| val_loss: 1.6723, val_acc: 48.10%
+Epoch   3/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.25it/s, loss: 1.0834, acc
+             : 100%|██████████| val_loss: 1.4356, val_acc: 53.87%
+Epoch   4/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.06it/s, loss: 0.9032, acc
+             : 100%|██████████| val_loss: 1.0201, val_acc: 65.54%
+Epoch   5/ 10: 100%|██████████| 98/98 [00:05<00:00, 16.52it/s, loss: 0.7763, acc
+             : 100%|██████████| val_loss: 0.9184, val_acc: 68.54%
+Epoch   6/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.22it/s, loss: 0.7115, acc
+             : 100%|██████████| val_loss: 1.3750, val_acc: 55.52%
+Epoch   7/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.07it/s, loss: 0.6740, acc
+             : 100%|██████████| val_loss: 1.2015, val_acc: 62.77%
+Epoch   8/ 10: 100%|██████████| 98/98 [00:05<00:00, 16.41it/s, loss: 0.6409, acc
+             : 100%|██████████| val_loss: 1.5049, val_acc: 58.12%
+Epoch   9/ 10: 100%|██████████| 98/98 [00:05<00:00, 16.39it/s, loss: 0.6118, acc
+             : 100%|██████████| val_loss: 1.0018, val_acc: 68.62%
+Epoch  10/ 10: 100%|██████████| 98/98 [00:06<00:00, 16.16it/s, loss: 0.5903, acc
+             : 100%|██████████| val_loss: 0.8233, val_acc: 72.19%
+
+Training time: 0:01:06.259993
